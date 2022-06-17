@@ -2,15 +2,15 @@
 
 # Setting paths
 top="user_proj_example"
-base_dir="/home/users/praina/ee272/skywater-digital-flow/GcdUnitCaravel"
-build_target="build"
+base_dir="/home/users/liuleo/EE372/top"
+build_target="build64_final"
 
 gds_path="$base_dir/$build_target/*-signoff/outputs/design-merged.gds"
 lef_path="$base_dir/$build_target/*-signoff/outputs/design.lef"
 def_path="$base_dir/$build_target/*-signoff/outputs/design.def.gz"
 gl_path="$base_dir/$build_target/*-signoff/outputs/design.vcs.v"
 spef_path="$base_dir/$build_target/*-signoff/outputs/design.spef.gz"
-rtl_path="$base_dir/$build_target/4-rtl/outputs/design.v"
+rtl_path="$base_dir/$build_target/*-rtl/outputs/design.v"
 spi_path="$base_dir/$build_target/*-gds2spice/outputs/design_extracted.spice"
 
 # Create file names
@@ -55,17 +55,17 @@ fi
 
 # Moving files
 echo "Moving $gds_path to $gds_file"
-cp $gds_path $gds_file
+cp -L $gds_path $gds_file
 echo "Moving $lef_path to $lef_file"
-cp $lef_path $lef_file
+cp -L $lef_path $lef_file
 echo "Moving $def_path to $def_file"
-cp $def_path $def_file
+cp -L $def_path $def_file
 echo "Moving $gl_path to $gl_file"
-cp $gl_path $gl_file
+cp -L $gl_path $gl_file
 echo "Moving $rtl_path to $rtl_file"
 echo "Moving $spef_path to $spef_file"
-cp $spef_path $spef_file
-cp $rtl_path $rtl_file
+cp -L $spef_path $spef_file
+cp -L $rtl_path $rtl_file
 #echo "Moving $spi_path to $spi_file"
 #cp $spi_path $spi_file
 
