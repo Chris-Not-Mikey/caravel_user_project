@@ -589,7 +589,7 @@ module Top (
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
         .ADDR_LO          (32'h30000000),
-        .ADDR_HI          (32'h30000078)
+        .ADDR_HI          (32'h30000048)
     ) br0 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -603,8 +603,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h30000078),
-        .ADDR_HI          (32'h300000cc)
+        .ADDR_LO          (32'h30000048),
+        .ADDR_HI          (32'h3000006c)
     ) br1 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -618,8 +618,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h300000cc),
-        .ADDR_HI          (32'h3000012c)
+        .ADDR_LO          (32'h3000006c),
+        .ADDR_HI          (32'h3000009c)
     ) br2 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -633,8 +633,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h3000012c),
-        .ADDR_HI          (32'h30000180)
+        .ADDR_LO          (32'h3000009c),
+        .ADDR_HI          (32'h300000c0)
     ) br3 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -648,8 +648,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h30000180),
-        .ADDR_HI          (32'h300001ec)
+        .ADDR_LO          (32'h300000c0),
+        .ADDR_HI          (32'h300000fc)
     ) br4 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -663,8 +663,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h300001ec),
-        .ADDR_HI          (32'h30000240)
+        .ADDR_LO          (32'h300000fc),
+        .ADDR_HI          (32'h30000120)
     ) br5 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -678,8 +678,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h30000240),
-        .ADDR_HI          (32'h300002a0)
+        .ADDR_LO          (32'h30000120),
+        .ADDR_HI          (32'h30000150)
     ) br6 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -693,8 +693,8 @@ module Top (
         .NOC_WID          (16),
         .REGIONAL_ADDR_WID(11),
         .FANOUT           (32),
-        .ADDR_LO          (32'h300002a0),
-        .ADDR_HI          (32'h300002f4)
+        .ADDR_LO          (32'h30000150),
+        .ADDR_HI          (32'h30000174)
     ) br7 (
         .clk(wb_clk_i),     .rst(wb_rst_i),
         .in_dat(br_dat),    .in_adr(br_adr),
@@ -720,42 +720,18 @@ module Top (
     wire            rlllll_rxr, rlllll_rxa, rlllll_txa;
     wire [1:0]      rlllll_rxd;
     wire [31:0]     rlllll_txd;
-    wire            rllllll_rxr, rllllll_rxa, rllllll_txa;
-    wire [1:0]      rllllll_rxd;
-    wire [31:0]     rllllll_txd;
-    wire            rlllllr_rxr, rlllllr_rxa, rlllllr_txa;
-    wire [1:0]      rlllllr_rxd;
-    wire [31:0]     rlllllr_txd;
     wire            rllllr_rxr, rllllr_rxa, rllllr_txa;
     wire [1:0]      rllllr_rxd;
     wire [31:0]     rllllr_txd;
-    wire            rllllrl_rxr, rllllrl_rxa, rllllrl_txa;
-    wire [1:0]      rllllrl_rxd;
-    wire [31:0]     rllllrl_txd;
-    wire            rllllrr_rxr, rllllrr_rxa, rllllrr_txa;
-    wire [1:0]      rllllrr_rxd;
-    wire [31:0]     rllllrr_txd;
     wire            rlllr_rxr, rlllr_rxa, rlllr_txa;
     wire [1:0]      rlllr_rxd;
     wire [31:0]     rlllr_txd;
     wire            rlllrl_rxr, rlllrl_rxa, rlllrl_txa;
     wire [1:0]      rlllrl_rxd;
     wire [31:0]     rlllrl_txd;
-    wire            rlllrll_rxr, rlllrll_rxa, rlllrll_txa;
-    wire [1:0]      rlllrll_rxd;
-    wire [31:0]     rlllrll_txd;
-    wire            rlllrlr_rxr, rlllrlr_rxa, rlllrlr_txa;
-    wire [1:0]      rlllrlr_rxd;
-    wire [31:0]     rlllrlr_txd;
     wire            rlllrr_rxr, rlllrr_rxa, rlllrr_txa;
     wire [1:0]      rlllrr_rxd;
     wire [31:0]     rlllrr_txd;
-    wire            rlllrrl_rxr, rlllrrl_rxa, rlllrrl_txa;
-    wire [1:0]      rlllrrl_rxd;
-    wire [31:0]     rlllrrl_txd;
-    wire            rlllrrr_rxr, rlllrrr_rxa, rlllrrr_txa;
-    wire [1:0]      rlllrrr_rxd;
-    wire [31:0]     rlllrrr_txd;
     wire            rllr_rxr, rllr_rxa, rllr_txa;
     wire [1:0]      rllr_rxd;
     wire [31:0]     rllr_txd;
@@ -765,42 +741,18 @@ module Top (
     wire            rllrll_rxr, rllrll_rxa, rllrll_txa;
     wire [1:0]      rllrll_rxd;
     wire [31:0]     rllrll_txd;
-    wire            rllrlll_rxr, rllrlll_rxa, rllrlll_txa;
-    wire [1:0]      rllrlll_rxd;
-    wire [31:0]     rllrlll_txd;
-    wire            rllrllr_rxr, rllrllr_rxa, rllrllr_txa;
-    wire [1:0]      rllrllr_rxd;
-    wire [31:0]     rllrllr_txd;
     wire            rllrlr_rxr, rllrlr_rxa, rllrlr_txa;
     wire [1:0]      rllrlr_rxd;
     wire [31:0]     rllrlr_txd;
-    wire            rllrlrl_rxr, rllrlrl_rxa, rllrlrl_txa;
-    wire [1:0]      rllrlrl_rxd;
-    wire [31:0]     rllrlrl_txd;
-    wire            rllrlrr_rxr, rllrlrr_rxa, rllrlrr_txa;
-    wire [1:0]      rllrlrr_rxd;
-    wire [31:0]     rllrlrr_txd;
     wire            rllrr_rxr, rllrr_rxa, rllrr_txa;
     wire [1:0]      rllrr_rxd;
     wire [31:0]     rllrr_txd;
     wire            rllrrl_rxr, rllrrl_rxa, rllrrl_txa;
     wire [1:0]      rllrrl_rxd;
     wire [31:0]     rllrrl_txd;
-    wire            rllrrll_rxr, rllrrll_rxa, rllrrll_txa;
-    wire [1:0]      rllrrll_rxd;
-    wire [31:0]     rllrrll_txd;
-    wire            rllrrlr_rxr, rllrrlr_rxa, rllrrlr_txa;
-    wire [1:0]      rllrrlr_rxd;
-    wire [31:0]     rllrrlr_txd;
     wire            rllrrr_rxr, rllrrr_rxa, rllrrr_txa;
     wire [1:0]      rllrrr_rxd;
     wire [31:0]     rllrrr_txd;
-    wire            rllrrrl_rxr, rllrrrl_rxa, rllrrrl_txa;
-    wire [1:0]      rllrrrl_rxd;
-    wire [31:0]     rllrrrl_txd;
-    wire            rllrrrr_rxr, rllrrrr_rxa, rllrrrr_txa;
-    wire [1:0]      rllrrrr_rxd;
-    wire [31:0]     rllrrrr_txd;
     wire            rlr_rxr, rlr_rxa, rlr_txa;
     wire [1:0]      rlr_rxd;
     wire [31:0]     rlr_txd;
@@ -813,42 +765,18 @@ module Top (
     wire            rlrlll_rxr, rlrlll_rxa, rlrlll_txa;
     wire [1:0]      rlrlll_rxd;
     wire [31:0]     rlrlll_txd;
-    wire            rlrllll_rxr, rlrllll_rxa, rlrllll_txa;
-    wire [1:0]      rlrllll_rxd;
-    wire [31:0]     rlrllll_txd;
-    wire            rlrlllr_rxr, rlrlllr_rxa, rlrlllr_txa;
-    wire [1:0]      rlrlllr_rxd;
-    wire [31:0]     rlrlllr_txd;
     wire            rlrllr_rxr, rlrllr_rxa, rlrllr_txa;
     wire [1:0]      rlrllr_rxd;
     wire [31:0]     rlrllr_txd;
-    wire            rlrllrl_rxr, rlrllrl_rxa, rlrllrl_txa;
-    wire [1:0]      rlrllrl_rxd;
-    wire [31:0]     rlrllrl_txd;
-    wire            rlrllrr_rxr, rlrllrr_rxa, rlrllrr_txa;
-    wire [1:0]      rlrllrr_rxd;
-    wire [31:0]     rlrllrr_txd;
     wire            rlrlr_rxr, rlrlr_rxa, rlrlr_txa;
     wire [1:0]      rlrlr_rxd;
     wire [31:0]     rlrlr_txd;
     wire            rlrlrl_rxr, rlrlrl_rxa, rlrlrl_txa;
     wire [1:0]      rlrlrl_rxd;
     wire [31:0]     rlrlrl_txd;
-    wire            rlrlrll_rxr, rlrlrll_rxa, rlrlrll_txa;
-    wire [1:0]      rlrlrll_rxd;
-    wire [31:0]     rlrlrll_txd;
-    wire            rlrlrlr_rxr, rlrlrlr_rxa, rlrlrlr_txa;
-    wire [1:0]      rlrlrlr_rxd;
-    wire [31:0]     rlrlrlr_txd;
     wire            rlrlrr_rxr, rlrlrr_rxa, rlrlrr_txa;
     wire [1:0]      rlrlrr_rxd;
     wire [31:0]     rlrlrr_txd;
-    wire            rlrlrrl_rxr, rlrlrrl_rxa, rlrlrrl_txa;
-    wire [1:0]      rlrlrrl_rxd;
-    wire [31:0]     rlrlrrl_txd;
-    wire            rlrlrrr_rxr, rlrlrrr_rxa, rlrlrrr_txa;
-    wire [1:0]      rlrlrrr_rxd;
-    wire [31:0]     rlrlrrr_txd;
     wire            rlrr_rxr, rlrr_rxa, rlrr_txa;
     wire [1:0]      rlrr_rxd;
     wire [31:0]     rlrr_txd;
@@ -858,42 +786,18 @@ module Top (
     wire            rlrrll_rxr, rlrrll_rxa, rlrrll_txa;
     wire [1:0]      rlrrll_rxd;
     wire [31:0]     rlrrll_txd;
-    wire            rlrrlll_rxr, rlrrlll_rxa, rlrrlll_txa;
-    wire [1:0]      rlrrlll_rxd;
-    wire [31:0]     rlrrlll_txd;
-    wire            rlrrllr_rxr, rlrrllr_rxa, rlrrllr_txa;
-    wire [1:0]      rlrrllr_rxd;
-    wire [31:0]     rlrrllr_txd;
     wire            rlrrlr_rxr, rlrrlr_rxa, rlrrlr_txa;
     wire [1:0]      rlrrlr_rxd;
     wire [31:0]     rlrrlr_txd;
-    wire            rlrrlrl_rxr, rlrrlrl_rxa, rlrrlrl_txa;
-    wire [1:0]      rlrrlrl_rxd;
-    wire [31:0]     rlrrlrl_txd;
-    wire            rlrrlrr_rxr, rlrrlrr_rxa, rlrrlrr_txa;
-    wire [1:0]      rlrrlrr_rxd;
-    wire [31:0]     rlrrlrr_txd;
     wire            rlrrr_rxr, rlrrr_rxa, rlrrr_txa;
     wire [1:0]      rlrrr_rxd;
     wire [31:0]     rlrrr_txd;
     wire            rlrrrl_rxr, rlrrrl_rxa, rlrrrl_txa;
     wire [1:0]      rlrrrl_rxd;
     wire [31:0]     rlrrrl_txd;
-    wire            rlrrrll_rxr, rlrrrll_rxa, rlrrrll_txa;
-    wire [1:0]      rlrrrll_rxd;
-    wire [31:0]     rlrrrll_txd;
-    wire            rlrrrlr_rxr, rlrrrlr_rxa, rlrrrlr_txa;
-    wire [1:0]      rlrrrlr_rxd;
-    wire [31:0]     rlrrrlr_txd;
     wire            rlrrrr_rxr, rlrrrr_rxa, rlrrrr_txa;
     wire [1:0]      rlrrrr_rxd;
     wire [31:0]     rlrrrr_txd;
-    wire            rlrrrrl_rxr, rlrrrrl_rxa, rlrrrrl_txa;
-    wire [1:0]      rlrrrrl_rxd;
-    wire [31:0]     rlrrrrl_txd;
-    wire            rlrrrrr_rxr, rlrrrrr_rxa, rlrrrrr_txa;
-    wire [1:0]      rlrrrrr_rxd;
-    wire [31:0]     rlrrrrr_txd;
     wire            rr_rxr, rr_rxa, rr_txa;
     wire [1:0]      rr_rxd;
     wire [31:0]     rr_txd;
@@ -909,42 +813,18 @@ module Top (
     wire            rrllll_rxr, rrllll_rxa, rrllll_txa;
     wire [1:0]      rrllll_rxd;
     wire [31:0]     rrllll_txd;
-    wire            rrlllll_rxr, rrlllll_rxa, rrlllll_txa;
-    wire [1:0]      rrlllll_rxd;
-    wire [31:0]     rrlllll_txd;
-    wire            rrllllr_rxr, rrllllr_rxa, rrllllr_txa;
-    wire [1:0]      rrllllr_rxd;
-    wire [31:0]     rrllllr_txd;
     wire            rrlllr_rxr, rrlllr_rxa, rrlllr_txa;
     wire [1:0]      rrlllr_rxd;
     wire [31:0]     rrlllr_txd;
-    wire            rrlllrl_rxr, rrlllrl_rxa, rrlllrl_txa;
-    wire [1:0]      rrlllrl_rxd;
-    wire [31:0]     rrlllrl_txd;
-    wire            rrlllrr_rxr, rrlllrr_rxa, rrlllrr_txa;
-    wire [1:0]      rrlllrr_rxd;
-    wire [31:0]     rrlllrr_txd;
     wire            rrllr_rxr, rrllr_rxa, rrllr_txa;
     wire [1:0]      rrllr_rxd;
     wire [31:0]     rrllr_txd;
     wire            rrllrl_rxr, rrllrl_rxa, rrllrl_txa;
     wire [1:0]      rrllrl_rxd;
     wire [31:0]     rrllrl_txd;
-    wire            rrllrll_rxr, rrllrll_rxa, rrllrll_txa;
-    wire [1:0]      rrllrll_rxd;
-    wire [31:0]     rrllrll_txd;
-    wire            rrllrlr_rxr, rrllrlr_rxa, rrllrlr_txa;
-    wire [1:0]      rrllrlr_rxd;
-    wire [31:0]     rrllrlr_txd;
     wire            rrllrr_rxr, rrllrr_rxa, rrllrr_txa;
     wire [1:0]      rrllrr_rxd;
     wire [31:0]     rrllrr_txd;
-    wire            rrllrrl_rxr, rrllrrl_rxa, rrllrrl_txa;
-    wire [1:0]      rrllrrl_rxd;
-    wire [31:0]     rrllrrl_txd;
-    wire            rrllrrr_rxr, rrllrrr_rxa, rrllrrr_txa;
-    wire [1:0]      rrllrrr_rxd;
-    wire [31:0]     rrllrrr_txd;
     wire            rrlr_rxr, rrlr_rxa, rrlr_txa;
     wire [1:0]      rrlr_rxd;
     wire [31:0]     rrlr_txd;
@@ -954,42 +834,18 @@ module Top (
     wire            rrlrll_rxr, rrlrll_rxa, rrlrll_txa;
     wire [1:0]      rrlrll_rxd;
     wire [31:0]     rrlrll_txd;
-    wire            rrlrlll_rxr, rrlrlll_rxa, rrlrlll_txa;
-    wire [1:0]      rrlrlll_rxd;
-    wire [31:0]     rrlrlll_txd;
-    wire            rrlrllr_rxr, rrlrllr_rxa, rrlrllr_txa;
-    wire [1:0]      rrlrllr_rxd;
-    wire [31:0]     rrlrllr_txd;
     wire            rrlrlr_rxr, rrlrlr_rxa, rrlrlr_txa;
     wire [1:0]      rrlrlr_rxd;
     wire [31:0]     rrlrlr_txd;
-    wire            rrlrlrl_rxr, rrlrlrl_rxa, rrlrlrl_txa;
-    wire [1:0]      rrlrlrl_rxd;
-    wire [31:0]     rrlrlrl_txd;
-    wire            rrlrlrr_rxr, rrlrlrr_rxa, rrlrlrr_txa;
-    wire [1:0]      rrlrlrr_rxd;
-    wire [31:0]     rrlrlrr_txd;
     wire            rrlrr_rxr, rrlrr_rxa, rrlrr_txa;
     wire [1:0]      rrlrr_rxd;
     wire [31:0]     rrlrr_txd;
     wire            rrlrrl_rxr, rrlrrl_rxa, rrlrrl_txa;
     wire [1:0]      rrlrrl_rxd;
     wire [31:0]     rrlrrl_txd;
-    wire            rrlrrll_rxr, rrlrrll_rxa, rrlrrll_txa;
-    wire [1:0]      rrlrrll_rxd;
-    wire [31:0]     rrlrrll_txd;
-    wire            rrlrrlr_rxr, rrlrrlr_rxa, rrlrrlr_txa;
-    wire [1:0]      rrlrrlr_rxd;
-    wire [31:0]     rrlrrlr_txd;
     wire            rrlrrr_rxr, rrlrrr_rxa, rrlrrr_txa;
     wire [1:0]      rrlrrr_rxd;
     wire [31:0]     rrlrrr_txd;
-    wire            rrlrrrl_rxr, rrlrrrl_rxa, rrlrrrl_txa;
-    wire [1:0]      rrlrrrl_rxd;
-    wire [31:0]     rrlrrrl_txd;
-    wire            rrlrrrr_rxr, rrlrrrr_rxa, rrlrrrr_txa;
-    wire [1:0]      rrlrrrr_rxd;
-    wire [31:0]     rrlrrrr_txd;
     wire            rrr_rxr, rrr_rxa, rrr_txa;
     wire [1:0]      rrr_rxd;
     wire [31:0]     rrr_txd;
@@ -1002,42 +858,18 @@ module Top (
     wire            rrrlll_rxr, rrrlll_rxa, rrrlll_txa;
     wire [1:0]      rrrlll_rxd;
     wire [31:0]     rrrlll_txd;
-    wire            rrrllll_rxr, rrrllll_rxa, rrrllll_txa;
-    wire [1:0]      rrrllll_rxd;
-    wire [31:0]     rrrllll_txd;
-    wire            rrrlllr_rxr, rrrlllr_rxa, rrrlllr_txa;
-    wire [1:0]      rrrlllr_rxd;
-    wire [31:0]     rrrlllr_txd;
     wire            rrrllr_rxr, rrrllr_rxa, rrrllr_txa;
     wire [1:0]      rrrllr_rxd;
     wire [31:0]     rrrllr_txd;
-    wire            rrrllrl_rxr, rrrllrl_rxa, rrrllrl_txa;
-    wire [1:0]      rrrllrl_rxd;
-    wire [31:0]     rrrllrl_txd;
-    wire            rrrllrr_rxr, rrrllrr_rxa, rrrllrr_txa;
-    wire [1:0]      rrrllrr_rxd;
-    wire [31:0]     rrrllrr_txd;
     wire            rrrlr_rxr, rrrlr_rxa, rrrlr_txa;
     wire [1:0]      rrrlr_rxd;
     wire [31:0]     rrrlr_txd;
     wire            rrrlrl_rxr, rrrlrl_rxa, rrrlrl_txa;
     wire [1:0]      rrrlrl_rxd;
     wire [31:0]     rrrlrl_txd;
-    wire            rrrlrll_rxr, rrrlrll_rxa, rrrlrll_txa;
-    wire [1:0]      rrrlrll_rxd;
-    wire [31:0]     rrrlrll_txd;
-    wire            rrrlrlr_rxr, rrrlrlr_rxa, rrrlrlr_txa;
-    wire [1:0]      rrrlrlr_rxd;
-    wire [31:0]     rrrlrlr_txd;
     wire            rrrlrr_rxr, rrrlrr_rxa, rrrlrr_txa;
     wire [1:0]      rrrlrr_rxd;
     wire [31:0]     rrrlrr_txd;
-    wire            rrrlrrl_rxr, rrrlrrl_rxa, rrrlrrl_txa;
-    wire [1:0]      rrrlrrl_rxd;
-    wire [31:0]     rrrlrrl_txd;
-    wire            rrrlrrr_rxr, rrrlrrr_rxa, rrrlrrr_txa;
-    wire [1:0]      rrrlrrr_rxd;
-    wire [31:0]     rrrlrrr_txd;
     wire            rrrr_rxr, rrrr_rxa, rrrr_txa;
     wire [1:0]      rrrr_rxd;
     wire [31:0]     rrrr_txd;
@@ -1047,42 +879,18 @@ module Top (
     wire            rrrrll_rxr, rrrrll_rxa, rrrrll_txa;
     wire [1:0]      rrrrll_rxd;
     wire [31:0]     rrrrll_txd;
-    wire            rrrrlll_rxr, rrrrlll_rxa, rrrrlll_txa;
-    wire [1:0]      rrrrlll_rxd;
-    wire [31:0]     rrrrlll_txd;
-    wire            rrrrllr_rxr, rrrrllr_rxa, rrrrllr_txa;
-    wire [1:0]      rrrrllr_rxd;
-    wire [31:0]     rrrrllr_txd;
     wire            rrrrlr_rxr, rrrrlr_rxa, rrrrlr_txa;
     wire [1:0]      rrrrlr_rxd;
     wire [31:0]     rrrrlr_txd;
-    wire            rrrrlrl_rxr, rrrrlrl_rxa, rrrrlrl_txa;
-    wire [1:0]      rrrrlrl_rxd;
-    wire [31:0]     rrrrlrl_txd;
-    wire            rrrrlrr_rxr, rrrrlrr_rxa, rrrrlrr_txa;
-    wire [1:0]      rrrrlrr_rxd;
-    wire [31:0]     rrrrlrr_txd;
     wire            rrrrr_rxr, rrrrr_rxa, rrrrr_txa;
     wire [1:0]      rrrrr_rxd;
     wire [31:0]     rrrrr_txd;
     wire            rrrrrl_rxr, rrrrrl_rxa, rrrrrl_txa;
     wire [1:0]      rrrrrl_rxd;
     wire [31:0]     rrrrrl_txd;
-    wire            rrrrrll_rxr, rrrrrll_rxa, rrrrrll_txa;
-    wire [1:0]      rrrrrll_rxd;
-    wire [31:0]     rrrrrll_txd;
-    wire            rrrrrlr_rxr, rrrrrlr_rxa, rrrrrlr_txa;
-    wire [1:0]      rrrrrlr_rxd;
-    wire [31:0]     rrrrrlr_txd;
     wire            rrrrrr_rxr, rrrrrr_rxa, rrrrrr_txa;
     wire [1:0]      rrrrrr_rxd;
     wire [31:0]     rrrrrr_txd;
-    wire            rrrrrrl_rxr, rrrrrrl_rxa, rrrrrrl_txa;
-    wire [1:0]      rrrrrrl_rxd;
-    wire [31:0]     rrrrrrl_txd;
-    wire            rrrrrrr_rxr, rrrrrrr_rxa, rrrrrrr_txa;
-    wire [1:0]      rrrrrrr_rxd;
-    wire [31:0]     rrrrrrr_txd;
 
 
     assign r_rxr = top_rx_req;
@@ -1140,73 +948,31 @@ module Top (
         .tx_c1d(rllllr_txd), .tx_c1a(rllllr_txa),
         .tx_pd(rllll_txd), .tx_pa(rllll_txa)
     );
-    PE_down rlllll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h3c),
-        .rx_pr(rlllll_rxr), .rx_pd(rlllll_rxd), .rx_pa(rlllll_rxa),
-        .rx_c0r(rllllll_rxr), .rx_c0d(rllllll_rxd), .rx_c0a(rllllll_rxa),
-        .rx_c1r(rlllllr_rxr), .rx_c1d(rlllllr_rxd), .rx_c1a(rlllllr_rxa),
-        .tx_c0d(rllllll_txd), .tx_c0a(rllllll_txa),
-        .tx_c1d(rlllllr_txd), .tx_c1a(rlllllr_txa),
-        .tx_pd(rlllll_txd), .tx_pa(rlllll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlllll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlllll_rxr),
+        .rx_pd(rlllll_rxd),
+        .rx_pa(rlllll_rxa),
+        .tx_pd(rlllll_txd),
+        .tx_pa(rlllll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rllllll (
+    ) leaf_rllllr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rllllll_rxr),
-        .rx_pd(rllllll_rxd),
-        .rx_pa(rllllll_rxa),
-        .tx_pd(rllllll_txd),
-        .tx_pa(rllllll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlllllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlllllr_rxr),
-        .rx_pd(rlllllr_rxd),
-        .rx_pa(rlllllr_rxa),
-        .tx_pd(rlllllr_txd),
-        .tx_pa(rlllllr_txa)
-    );
-    PE_up rllllr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h48),
-        .rx_pr(rllllr_rxr), .rx_pd(rllllr_rxd), .rx_pa(rllllr_rxa),
-        .rx_c0r(rllllrl_rxr), .rx_c0d(rllllrl_rxd), .rx_c0a(rllllrl_rxa),
-        .rx_c1r(rllllrr_rxr), .rx_c1d(rllllrr_rxd), .rx_c1a(rllllrr_rxa),
-        .tx_c0d(rllllrl_txd), .tx_c0a(rllllrl_txa),
-        .tx_c1d(rllllrr_txd), .tx_c1a(rllllrr_txa),
-        .tx_pd(rllllr_txd), .tx_pa(rllllr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllllrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllllrl_rxr),
-        .rx_pd(rllllrl_rxd),
-        .rx_pa(rllllrl_rxa),
-        .tx_pd(rllllrl_txd),
-        .tx_pa(rllllrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllllrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllllrr_rxr),
-        .rx_pd(rllllrr_rxd),
-        .rx_pa(rllllrr_rxa),
-        .tx_pd(rllllrr_txd),
-        .tx_pa(rllllrr_txa)
+        .rx_pr(rllllr_rxr),
+        .rx_pd(rllllr_rxd),
+        .rx_pa(rllllr_rxa),
+        .tx_pd(rllllr_txd),
+        .tx_pa(rllllr_txa)
     );
     PE_left rlllr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h54),
+        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h3c),
         .rx_pr(rlllr_rxr), .rx_pd(rlllr_rxd), .rx_pa(rlllr_rxa),
         .rx_c0r(rlllrl_rxr), .rx_c0d(rlllrl_rxd), .rx_c0a(rlllrl_rxa),
         .rx_c1r(rlllrr_rxr), .rx_c1d(rlllrr_rxd), .rx_c1a(rlllrr_rxa),
@@ -1214,69 +980,27 @@ module Top (
         .tx_c1d(rlllrr_txd), .tx_c1a(rlllrr_txa),
         .tx_pd(rlllr_txd), .tx_pa(rlllr_txa)
     );
-    PE_down rlllrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h60),
-        .rx_pr(rlllrl_rxr), .rx_pd(rlllrl_rxd), .rx_pa(rlllrl_rxa),
-        .rx_c0r(rlllrll_rxr), .rx_c0d(rlllrll_rxd), .rx_c0a(rlllrll_rxa),
-        .rx_c1r(rlllrlr_rxr), .rx_c1d(rlllrlr_rxd), .rx_c1a(rlllrlr_rxa),
-        .tx_c0d(rlllrll_txd), .tx_c0a(rlllrll_txa),
-        .tx_c1d(rlllrlr_txd), .tx_c1a(rlllrlr_txa),
-        .tx_pd(rlllrl_txd), .tx_pa(rlllrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlllrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlllrl_rxr),
+        .rx_pd(rlllrl_rxd),
+        .rx_pa(rlllrl_rxa),
+        .tx_pd(rlllrl_txd),
+        .tx_pa(rlllrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rlllrll (
+    ) leaf_rlllrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rlllrll_rxr),
-        .rx_pd(rlllrll_rxd),
-        .rx_pa(rlllrll_rxa),
-        .tx_pd(rlllrll_txd),
-        .tx_pa(rlllrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlllrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlllrlr_rxr),
-        .rx_pd(rlllrlr_rxd),
-        .rx_pa(rlllrlr_rxa),
-        .tx_pd(rlllrlr_txd),
-        .tx_pa(rlllrlr_txa)
-    );
-    PE_up rlllrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br0_dat), .cfg_adr(br0_adr), .slv_addr(11'h6c),
-        .rx_pr(rlllrr_rxr), .rx_pd(rlllrr_rxd), .rx_pa(rlllrr_rxa),
-        .rx_c0r(rlllrrl_rxr), .rx_c0d(rlllrrl_rxd), .rx_c0a(rlllrrl_rxa),
-        .rx_c1r(rlllrrr_rxr), .rx_c1d(rlllrrr_rxd), .rx_c1a(rlllrrr_rxa),
-        .tx_c0d(rlllrrl_txd), .tx_c0a(rlllrrl_txa),
-        .tx_c1d(rlllrrr_txd), .tx_c1a(rlllrrr_txa),
-        .tx_pd(rlllrr_txd), .tx_pa(rlllrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlllrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlllrrl_rxr),
-        .rx_pd(rlllrrl_rxd),
-        .rx_pa(rlllrrl_rxa),
-        .tx_pd(rlllrrl_txd),
-        .tx_pa(rlllrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlllrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlllrrr_rxr),
-        .rx_pd(rlllrrr_rxd),
-        .rx_pa(rlllrrr_rxa),
-        .tx_pd(rlllrrr_txd),
-        .tx_pa(rlllrrr_txa)
+        .rx_pr(rlllrr_rxr),
+        .rx_pd(rlllrr_rxd),
+        .rx_pa(rlllrr_rxa),
+        .tx_pd(rlllrr_txd),
+        .tx_pa(rlllrr_txa)
     );
     PE_up rllr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -1298,73 +1022,31 @@ module Top (
         .tx_c1d(rllrlr_txd), .tx_c1a(rllrlr_txa),
         .tx_pd(rllrl_txd), .tx_pa(rllrl_txa)
     );
-    PE_down rllrll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h18),
-        .rx_pr(rllrll_rxr), .rx_pd(rllrll_rxd), .rx_pa(rllrll_rxa),
-        .rx_c0r(rllrlll_rxr), .rx_c0d(rllrlll_rxd), .rx_c0a(rllrlll_rxa),
-        .rx_c1r(rllrllr_rxr), .rx_c1d(rllrllr_rxd), .rx_c1a(rllrllr_rxa),
-        .tx_c0d(rllrlll_txd), .tx_c0a(rllrlll_txa),
-        .tx_c1d(rllrllr_txd), .tx_c1a(rllrllr_txa),
-        .tx_pd(rllrll_txd), .tx_pa(rllrll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rllrll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rllrll_rxr),
+        .rx_pd(rllrll_rxd),
+        .rx_pa(rllrll_rxa),
+        .tx_pd(rllrll_txd),
+        .tx_pa(rllrll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rllrlll (
+    ) leaf_rllrlr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rllrlll_rxr),
-        .rx_pd(rllrlll_rxd),
-        .rx_pa(rllrlll_rxa),
-        .tx_pd(rllrlll_txd),
-        .tx_pa(rllrlll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrllr_rxr),
-        .rx_pd(rllrllr_rxd),
-        .rx_pa(rllrllr_rxa),
-        .tx_pd(rllrllr_txd),
-        .tx_pa(rllrllr_txa)
-    );
-    PE_up rllrlr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h24),
-        .rx_pr(rllrlr_rxr), .rx_pd(rllrlr_rxd), .rx_pa(rllrlr_rxa),
-        .rx_c0r(rllrlrl_rxr), .rx_c0d(rllrlrl_rxd), .rx_c0a(rllrlrl_rxa),
-        .rx_c1r(rllrlrr_rxr), .rx_c1d(rllrlrr_rxd), .rx_c1a(rllrlrr_rxa),
-        .tx_c0d(rllrlrl_txd), .tx_c0a(rllrlrl_txa),
-        .tx_c1d(rllrlrr_txd), .tx_c1a(rllrlrr_txa),
-        .tx_pd(rllrlr_txd), .tx_pa(rllrlr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrlrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrlrl_rxr),
-        .rx_pd(rllrlrl_rxd),
-        .rx_pa(rllrlrl_rxa),
-        .tx_pd(rllrlrl_txd),
-        .tx_pa(rllrlrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrlrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrlrr_rxr),
-        .rx_pd(rllrlrr_rxd),
-        .rx_pa(rllrlrr_rxa),
-        .tx_pd(rllrlrr_txd),
-        .tx_pa(rllrlrr_txa)
+        .rx_pr(rllrlr_rxr),
+        .rx_pd(rllrlr_rxd),
+        .rx_pa(rllrlr_rxa),
+        .tx_pd(rllrlr_txd),
+        .tx_pa(rllrlr_txa)
     );
     PE_left rllrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h30),
+        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h18),
         .rx_pr(rllrr_rxr), .rx_pd(rllrr_rxd), .rx_pa(rllrr_rxa),
         .rx_c0r(rllrrl_rxr), .rx_c0d(rllrrl_rxd), .rx_c0a(rllrrl_rxa),
         .rx_c1r(rllrrr_rxr), .rx_c1d(rllrrr_rxd), .rx_c1a(rllrrr_rxa),
@@ -1372,69 +1054,27 @@ module Top (
         .tx_c1d(rllrrr_txd), .tx_c1a(rllrrr_txa),
         .tx_pd(rllrr_txd), .tx_pa(rllrr_txa)
     );
-    PE_down rllrrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h3c),
-        .rx_pr(rllrrl_rxr), .rx_pd(rllrrl_rxd), .rx_pa(rllrrl_rxa),
-        .rx_c0r(rllrrll_rxr), .rx_c0d(rllrrll_rxd), .rx_c0a(rllrrll_rxa),
-        .rx_c1r(rllrrlr_rxr), .rx_c1d(rllrrlr_rxd), .rx_c1a(rllrrlr_rxa),
-        .tx_c0d(rllrrll_txd), .tx_c0a(rllrrll_txa),
-        .tx_c1d(rllrrlr_txd), .tx_c1a(rllrrlr_txa),
-        .tx_pd(rllrrl_txd), .tx_pa(rllrrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rllrrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rllrrl_rxr),
+        .rx_pd(rllrrl_rxd),
+        .rx_pa(rllrrl_rxa),
+        .tx_pd(rllrrl_txd),
+        .tx_pa(rllrrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rllrrll (
+    ) leaf_rllrrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rllrrll_rxr),
-        .rx_pd(rllrrll_rxd),
-        .rx_pa(rllrrll_rxa),
-        .tx_pd(rllrrll_txd),
-        .tx_pa(rllrrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrrlr_rxr),
-        .rx_pd(rllrrlr_rxd),
-        .rx_pa(rllrrlr_rxa),
-        .tx_pd(rllrrlr_txd),
-        .tx_pa(rllrrlr_txa)
-    );
-    PE_up rllrrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br1_dat), .cfg_adr(br1_adr), .slv_addr(11'h48),
-        .rx_pr(rllrrr_rxr), .rx_pd(rllrrr_rxd), .rx_pa(rllrrr_rxa),
-        .rx_c0r(rllrrrl_rxr), .rx_c0d(rllrrrl_rxd), .rx_c0a(rllrrrl_rxa),
-        .rx_c1r(rllrrrr_rxr), .rx_c1d(rllrrrr_rxd), .rx_c1a(rllrrrr_rxa),
-        .tx_c0d(rllrrrl_txd), .tx_c0a(rllrrrl_txa),
-        .tx_c1d(rllrrrr_txd), .tx_c1a(rllrrrr_txa),
-        .tx_pd(rllrrr_txd), .tx_pa(rllrrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrrrl_rxr),
-        .rx_pd(rllrrrl_rxd),
-        .rx_pa(rllrrrl_rxa),
-        .tx_pd(rllrrrl_txd),
-        .tx_pa(rllrrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rllrrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rllrrrr_rxr),
-        .rx_pd(rllrrrr_rxd),
-        .rx_pa(rllrrrr_rxa),
-        .tx_pd(rllrrrr_txd),
-        .tx_pa(rllrrrr_txa)
+        .rx_pr(rllrrr_rxr),
+        .rx_pd(rllrrr_rxd),
+        .rx_pa(rllrrr_rxa),
+        .tx_pd(rllrrr_txd),
+        .tx_pa(rllrrr_txa)
     );
     PE_left rlr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -1466,73 +1106,31 @@ module Top (
         .tx_c1d(rlrllr_txd), .tx_c1a(rlrllr_txa),
         .tx_pd(rlrll_txd), .tx_pa(rlrll_txa)
     );
-    PE_down rlrlll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h24),
-        .rx_pr(rlrlll_rxr), .rx_pd(rlrlll_rxd), .rx_pa(rlrlll_rxa),
-        .rx_c0r(rlrllll_rxr), .rx_c0d(rlrllll_rxd), .rx_c0a(rlrllll_rxa),
-        .rx_c1r(rlrlllr_rxr), .rx_c1d(rlrlllr_rxd), .rx_c1a(rlrlllr_rxa),
-        .tx_c0d(rlrllll_txd), .tx_c0a(rlrllll_txa),
-        .tx_c1d(rlrlllr_txd), .tx_c1a(rlrlllr_txa),
-        .tx_pd(rlrlll_txd), .tx_pa(rlrlll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlrlll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlrlll_rxr),
+        .rx_pd(rlrlll_rxd),
+        .rx_pa(rlrlll_rxa),
+        .tx_pd(rlrlll_txd),
+        .tx_pa(rlrlll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rlrllll (
+    ) leaf_rlrllr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rlrllll_rxr),
-        .rx_pd(rlrllll_rxd),
-        .rx_pa(rlrllll_rxa),
-        .tx_pd(rlrllll_txd),
-        .tx_pa(rlrllll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrlllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrlllr_rxr),
-        .rx_pd(rlrlllr_rxd),
-        .rx_pa(rlrlllr_rxa),
-        .tx_pd(rlrlllr_txd),
-        .tx_pa(rlrlllr_txa)
-    );
-    PE_up rlrllr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h30),
-        .rx_pr(rlrllr_rxr), .rx_pd(rlrllr_rxd), .rx_pa(rlrllr_rxa),
-        .rx_c0r(rlrllrl_rxr), .rx_c0d(rlrllrl_rxd), .rx_c0a(rlrllrl_rxa),
-        .rx_c1r(rlrllrr_rxr), .rx_c1d(rlrllrr_rxd), .rx_c1a(rlrllrr_rxa),
-        .tx_c0d(rlrllrl_txd), .tx_c0a(rlrllrl_txa),
-        .tx_c1d(rlrllrr_txd), .tx_c1a(rlrllrr_txa),
-        .tx_pd(rlrllr_txd), .tx_pa(rlrllr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrllrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrllrl_rxr),
-        .rx_pd(rlrllrl_rxd),
-        .rx_pa(rlrllrl_rxa),
-        .tx_pd(rlrllrl_txd),
-        .tx_pa(rlrllrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrllrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrllrr_rxr),
-        .rx_pd(rlrllrr_rxd),
-        .rx_pa(rlrllrr_rxa),
-        .tx_pd(rlrllrr_txd),
-        .tx_pa(rlrllrr_txa)
+        .rx_pr(rlrllr_rxr),
+        .rx_pd(rlrllr_rxd),
+        .rx_pa(rlrllr_rxa),
+        .tx_pd(rlrllr_txd),
+        .tx_pa(rlrllr_txa)
     );
     PE_left rlrlr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h3c),
+        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h24),
         .rx_pr(rlrlr_rxr), .rx_pd(rlrlr_rxd), .rx_pa(rlrlr_rxa),
         .rx_c0r(rlrlrl_rxr), .rx_c0d(rlrlrl_rxd), .rx_c0a(rlrlrl_rxa),
         .rx_c1r(rlrlrr_rxr), .rx_c1d(rlrlrr_rxd), .rx_c1a(rlrlrr_rxa),
@@ -1540,69 +1138,27 @@ module Top (
         .tx_c1d(rlrlrr_txd), .tx_c1a(rlrlrr_txa),
         .tx_pd(rlrlr_txd), .tx_pa(rlrlr_txa)
     );
-    PE_down rlrlrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h48),
-        .rx_pr(rlrlrl_rxr), .rx_pd(rlrlrl_rxd), .rx_pa(rlrlrl_rxa),
-        .rx_c0r(rlrlrll_rxr), .rx_c0d(rlrlrll_rxd), .rx_c0a(rlrlrll_rxa),
-        .rx_c1r(rlrlrlr_rxr), .rx_c1d(rlrlrlr_rxd), .rx_c1a(rlrlrlr_rxa),
-        .tx_c0d(rlrlrll_txd), .tx_c0a(rlrlrll_txa),
-        .tx_c1d(rlrlrlr_txd), .tx_c1a(rlrlrlr_txa),
-        .tx_pd(rlrlrl_txd), .tx_pa(rlrlrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlrlrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlrlrl_rxr),
+        .rx_pd(rlrlrl_rxd),
+        .rx_pa(rlrlrl_rxa),
+        .tx_pd(rlrlrl_txd),
+        .tx_pa(rlrlrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rlrlrll (
+    ) leaf_rlrlrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rlrlrll_rxr),
-        .rx_pd(rlrlrll_rxd),
-        .rx_pa(rlrlrll_rxa),
-        .tx_pd(rlrlrll_txd),
-        .tx_pa(rlrlrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrlrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrlrlr_rxr),
-        .rx_pd(rlrlrlr_rxd),
-        .rx_pa(rlrlrlr_rxa),
-        .tx_pd(rlrlrlr_txd),
-        .tx_pa(rlrlrlr_txa)
-    );
-    PE_up rlrlrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br2_dat), .cfg_adr(br2_adr), .slv_addr(11'h54),
-        .rx_pr(rlrlrr_rxr), .rx_pd(rlrlrr_rxd), .rx_pa(rlrlrr_rxa),
-        .rx_c0r(rlrlrrl_rxr), .rx_c0d(rlrlrrl_rxd), .rx_c0a(rlrlrrl_rxa),
-        .rx_c1r(rlrlrrr_rxr), .rx_c1d(rlrlrrr_rxd), .rx_c1a(rlrlrrr_rxa),
-        .tx_c0d(rlrlrrl_txd), .tx_c0a(rlrlrrl_txa),
-        .tx_c1d(rlrlrrr_txd), .tx_c1a(rlrlrrr_txa),
-        .tx_pd(rlrlrr_txd), .tx_pa(rlrlrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrlrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrlrrl_rxr),
-        .rx_pd(rlrlrrl_rxd),
-        .rx_pa(rlrlrrl_rxa),
-        .tx_pd(rlrlrrl_txd),
-        .tx_pa(rlrlrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrlrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrlrrr_rxr),
-        .rx_pd(rlrlrrr_rxd),
-        .rx_pa(rlrlrrr_rxa),
-        .tx_pd(rlrlrrr_txd),
-        .tx_pa(rlrlrrr_txa)
+        .rx_pr(rlrlrr_rxr),
+        .rx_pd(rlrlrr_rxd),
+        .rx_pa(rlrlrr_rxa),
+        .tx_pd(rlrlrr_txd),
+        .tx_pa(rlrlrr_txa)
     );
     PE_up rlrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -1624,73 +1180,31 @@ module Top (
         .tx_c1d(rlrrlr_txd), .tx_c1a(rlrrlr_txa),
         .tx_pd(rlrrl_txd), .tx_pa(rlrrl_txa)
     );
-    PE_down rlrrll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h18),
-        .rx_pr(rlrrll_rxr), .rx_pd(rlrrll_rxd), .rx_pa(rlrrll_rxa),
-        .rx_c0r(rlrrlll_rxr), .rx_c0d(rlrrlll_rxd), .rx_c0a(rlrrlll_rxa),
-        .rx_c1r(rlrrllr_rxr), .rx_c1d(rlrrllr_rxd), .rx_c1a(rlrrllr_rxa),
-        .tx_c0d(rlrrlll_txd), .tx_c0a(rlrrlll_txa),
-        .tx_c1d(rlrrllr_txd), .tx_c1a(rlrrllr_txa),
-        .tx_pd(rlrrll_txd), .tx_pa(rlrrll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlrrll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlrrll_rxr),
+        .rx_pd(rlrrll_rxd),
+        .rx_pa(rlrrll_rxa),
+        .tx_pd(rlrrll_txd),
+        .tx_pa(rlrrll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rlrrlll (
+    ) leaf_rlrrlr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rlrrlll_rxr),
-        .rx_pd(rlrrlll_rxd),
-        .rx_pa(rlrrlll_rxa),
-        .tx_pd(rlrrlll_txd),
-        .tx_pa(rlrrlll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrllr_rxr),
-        .rx_pd(rlrrllr_rxd),
-        .rx_pa(rlrrllr_rxa),
-        .tx_pd(rlrrllr_txd),
-        .tx_pa(rlrrllr_txa)
-    );
-    PE_up rlrrlr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h24),
-        .rx_pr(rlrrlr_rxr), .rx_pd(rlrrlr_rxd), .rx_pa(rlrrlr_rxa),
-        .rx_c0r(rlrrlrl_rxr), .rx_c0d(rlrrlrl_rxd), .rx_c0a(rlrrlrl_rxa),
-        .rx_c1r(rlrrlrr_rxr), .rx_c1d(rlrrlrr_rxd), .rx_c1a(rlrrlrr_rxa),
-        .tx_c0d(rlrrlrl_txd), .tx_c0a(rlrrlrl_txa),
-        .tx_c1d(rlrrlrr_txd), .tx_c1a(rlrrlrr_txa),
-        .tx_pd(rlrrlr_txd), .tx_pa(rlrrlr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrlrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrlrl_rxr),
-        .rx_pd(rlrrlrl_rxd),
-        .rx_pa(rlrrlrl_rxa),
-        .tx_pd(rlrrlrl_txd),
-        .tx_pa(rlrrlrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrlrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrlrr_rxr),
-        .rx_pd(rlrrlrr_rxd),
-        .rx_pa(rlrrlrr_rxa),
-        .tx_pd(rlrrlrr_txd),
-        .tx_pa(rlrrlrr_txa)
+        .rx_pr(rlrrlr_rxr),
+        .rx_pd(rlrrlr_rxd),
+        .rx_pa(rlrrlr_rxa),
+        .tx_pd(rlrrlr_txd),
+        .tx_pa(rlrrlr_txa)
     );
     PE_left rlrrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h30),
+        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h18),
         .rx_pr(rlrrr_rxr), .rx_pd(rlrrr_rxd), .rx_pa(rlrrr_rxa),
         .rx_c0r(rlrrrl_rxr), .rx_c0d(rlrrrl_rxd), .rx_c0a(rlrrrl_rxa),
         .rx_c1r(rlrrrr_rxr), .rx_c1d(rlrrrr_rxd), .rx_c1a(rlrrrr_rxa),
@@ -1698,69 +1212,27 @@ module Top (
         .tx_c1d(rlrrrr_txd), .tx_c1a(rlrrrr_txa),
         .tx_pd(rlrrr_txd), .tx_pa(rlrrr_txa)
     );
-    PE_down rlrrrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h3c),
-        .rx_pr(rlrrrl_rxr), .rx_pd(rlrrrl_rxd), .rx_pa(rlrrrl_rxa),
-        .rx_c0r(rlrrrll_rxr), .rx_c0d(rlrrrll_rxd), .rx_c0a(rlrrrll_rxa),
-        .rx_c1r(rlrrrlr_rxr), .rx_c1d(rlrrrlr_rxd), .rx_c1a(rlrrrlr_rxa),
-        .tx_c0d(rlrrrll_txd), .tx_c0a(rlrrrll_txa),
-        .tx_c1d(rlrrrlr_txd), .tx_c1a(rlrrrlr_txa),
-        .tx_pd(rlrrrl_txd), .tx_pa(rlrrrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rlrrrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rlrrrl_rxr),
+        .rx_pd(rlrrrl_rxd),
+        .rx_pa(rlrrrl_rxa),
+        .tx_pd(rlrrrl_txd),
+        .tx_pa(rlrrrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rlrrrll (
+    ) leaf_rlrrrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rlrrrll_rxr),
-        .rx_pd(rlrrrll_rxd),
-        .rx_pa(rlrrrll_rxa),
-        .tx_pd(rlrrrll_txd),
-        .tx_pa(rlrrrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrrlr_rxr),
-        .rx_pd(rlrrrlr_rxd),
-        .rx_pa(rlrrrlr_rxa),
-        .tx_pd(rlrrrlr_txd),
-        .tx_pa(rlrrrlr_txa)
-    );
-    PE_up rlrrrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br3_dat), .cfg_adr(br3_adr), .slv_addr(11'h48),
-        .rx_pr(rlrrrr_rxr), .rx_pd(rlrrrr_rxd), .rx_pa(rlrrrr_rxa),
-        .rx_c0r(rlrrrrl_rxr), .rx_c0d(rlrrrrl_rxd), .rx_c0a(rlrrrrl_rxa),
-        .rx_c1r(rlrrrrr_rxr), .rx_c1d(rlrrrrr_rxd), .rx_c1a(rlrrrrr_rxa),
-        .tx_c0d(rlrrrrl_txd), .tx_c0a(rlrrrrl_txa),
-        .tx_c1d(rlrrrrr_txd), .tx_c1a(rlrrrrr_txa),
-        .tx_pd(rlrrrr_txd), .tx_pa(rlrrrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrrrl_rxr),
-        .rx_pd(rlrrrrl_rxd),
-        .rx_pa(rlrrrrl_rxa),
-        .tx_pd(rlrrrrl_txd),
-        .tx_pa(rlrrrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rlrrrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rlrrrrr_rxr),
-        .rx_pd(rlrrrrr_rxd),
-        .rx_pa(rlrrrrr_rxa),
-        .tx_pd(rlrrrrr_txd),
-        .tx_pa(rlrrrrr_txa)
+        .rx_pr(rlrrrr_rxr),
+        .rx_pd(rlrrrr_rxd),
+        .rx_pa(rlrrrr_rxa),
+        .tx_pd(rlrrrr_txd),
+        .tx_pa(rlrrrr_txa)
     );
     PE_up rr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -1802,73 +1274,31 @@ module Top (
         .tx_c1d(rrlllr_txd), .tx_c1a(rrlllr_txa),
         .tx_pd(rrlll_txd), .tx_pa(rrlll_txa)
     );
-    PE_down rrllll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h30),
-        .rx_pr(rrllll_rxr), .rx_pd(rrllll_rxd), .rx_pa(rrllll_rxa),
-        .rx_c0r(rrlllll_rxr), .rx_c0d(rrlllll_rxd), .rx_c0a(rrlllll_rxa),
-        .rx_c1r(rrllllr_rxr), .rx_c1d(rrllllr_rxd), .rx_c1a(rrllllr_rxa),
-        .tx_c0d(rrlllll_txd), .tx_c0a(rrlllll_txa),
-        .tx_c1d(rrllllr_txd), .tx_c1a(rrllllr_txa),
-        .tx_pd(rrllll_txd), .tx_pa(rrllll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrllll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrllll_rxr),
+        .rx_pd(rrllll_rxd),
+        .rx_pa(rrllll_rxa),
+        .tx_pd(rrllll_txd),
+        .tx_pa(rrllll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrlllll (
+    ) leaf_rrlllr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrlllll_rxr),
-        .rx_pd(rrlllll_rxd),
-        .rx_pa(rrlllll_rxa),
-        .tx_pd(rrlllll_txd),
-        .tx_pa(rrlllll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrllllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrllllr_rxr),
-        .rx_pd(rrllllr_rxd),
-        .rx_pa(rrllllr_rxa),
-        .tx_pd(rrllllr_txd),
-        .tx_pa(rrllllr_txa)
-    );
-    PE_up rrlllr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h3c),
-        .rx_pr(rrlllr_rxr), .rx_pd(rrlllr_rxd), .rx_pa(rrlllr_rxa),
-        .rx_c0r(rrlllrl_rxr), .rx_c0d(rrlllrl_rxd), .rx_c0a(rrlllrl_rxa),
-        .rx_c1r(rrlllrr_rxr), .rx_c1d(rrlllrr_rxd), .rx_c1a(rrlllrr_rxa),
-        .tx_c0d(rrlllrl_txd), .tx_c0a(rrlllrl_txa),
-        .tx_c1d(rrlllrr_txd), .tx_c1a(rrlllrr_txa),
-        .tx_pd(rrlllr_txd), .tx_pa(rrlllr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlllrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlllrl_rxr),
-        .rx_pd(rrlllrl_rxd),
-        .rx_pa(rrlllrl_rxa),
-        .tx_pd(rrlllrl_txd),
-        .tx_pa(rrlllrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlllrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlllrr_rxr),
-        .rx_pd(rrlllrr_rxd),
-        .rx_pa(rrlllrr_rxa),
-        .tx_pd(rrlllrr_txd),
-        .tx_pa(rrlllrr_txa)
+        .rx_pr(rrlllr_rxr),
+        .rx_pd(rrlllr_rxd),
+        .rx_pa(rrlllr_rxa),
+        .tx_pd(rrlllr_txd),
+        .tx_pa(rrlllr_txa)
     );
     PE_left rrllr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h48),
+        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h30),
         .rx_pr(rrllr_rxr), .rx_pd(rrllr_rxd), .rx_pa(rrllr_rxa),
         .rx_c0r(rrllrl_rxr), .rx_c0d(rrllrl_rxd), .rx_c0a(rrllrl_rxa),
         .rx_c1r(rrllrr_rxr), .rx_c1d(rrllrr_rxd), .rx_c1a(rrllrr_rxa),
@@ -1876,69 +1306,27 @@ module Top (
         .tx_c1d(rrllrr_txd), .tx_c1a(rrllrr_txa),
         .tx_pd(rrllr_txd), .tx_pa(rrllr_txa)
     );
-    PE_down rrllrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h54),
-        .rx_pr(rrllrl_rxr), .rx_pd(rrllrl_rxd), .rx_pa(rrllrl_rxa),
-        .rx_c0r(rrllrll_rxr), .rx_c0d(rrllrll_rxd), .rx_c0a(rrllrll_rxa),
-        .rx_c1r(rrllrlr_rxr), .rx_c1d(rrllrlr_rxd), .rx_c1a(rrllrlr_rxa),
-        .tx_c0d(rrllrll_txd), .tx_c0a(rrllrll_txa),
-        .tx_c1d(rrllrlr_txd), .tx_c1a(rrllrlr_txa),
-        .tx_pd(rrllrl_txd), .tx_pa(rrllrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrllrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrllrl_rxr),
+        .rx_pd(rrllrl_rxd),
+        .rx_pa(rrllrl_rxa),
+        .tx_pd(rrllrl_txd),
+        .tx_pa(rrllrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrllrll (
+    ) leaf_rrllrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrllrll_rxr),
-        .rx_pd(rrllrll_rxd),
-        .rx_pa(rrllrll_rxa),
-        .tx_pd(rrllrll_txd),
-        .tx_pa(rrllrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrllrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrllrlr_rxr),
-        .rx_pd(rrllrlr_rxd),
-        .rx_pa(rrllrlr_rxa),
-        .tx_pd(rrllrlr_txd),
-        .tx_pa(rrllrlr_txa)
-    );
-    PE_up rrllrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br4_dat), .cfg_adr(br4_adr), .slv_addr(11'h60),
-        .rx_pr(rrllrr_rxr), .rx_pd(rrllrr_rxd), .rx_pa(rrllrr_rxa),
-        .rx_c0r(rrllrrl_rxr), .rx_c0d(rrllrrl_rxd), .rx_c0a(rrllrrl_rxa),
-        .rx_c1r(rrllrrr_rxr), .rx_c1d(rrllrrr_rxd), .rx_c1a(rrllrrr_rxa),
-        .tx_c0d(rrllrrl_txd), .tx_c0a(rrllrrl_txa),
-        .tx_c1d(rrllrrr_txd), .tx_c1a(rrllrrr_txa),
-        .tx_pd(rrllrr_txd), .tx_pa(rrllrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrllrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrllrrl_rxr),
-        .rx_pd(rrllrrl_rxd),
-        .rx_pa(rrllrrl_rxa),
-        .tx_pd(rrllrrl_txd),
-        .tx_pa(rrllrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrllrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrllrrr_rxr),
-        .rx_pd(rrllrrr_rxd),
-        .rx_pa(rrllrrr_rxa),
-        .tx_pd(rrllrrr_txd),
-        .tx_pa(rrllrrr_txa)
+        .rx_pr(rrllrr_rxr),
+        .rx_pd(rrllrr_rxd),
+        .rx_pa(rrllrr_rxa),
+        .tx_pd(rrllrr_txd),
+        .tx_pa(rrllrr_txa)
     );
     PE_up rrlr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -1960,73 +1348,31 @@ module Top (
         .tx_c1d(rrlrlr_txd), .tx_c1a(rrlrlr_txa),
         .tx_pd(rrlrl_txd), .tx_pa(rrlrl_txa)
     );
-    PE_down rrlrll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h18),
-        .rx_pr(rrlrll_rxr), .rx_pd(rrlrll_rxd), .rx_pa(rrlrll_rxa),
-        .rx_c0r(rrlrlll_rxr), .rx_c0d(rrlrlll_rxd), .rx_c0a(rrlrlll_rxa),
-        .rx_c1r(rrlrllr_rxr), .rx_c1d(rrlrllr_rxd), .rx_c1a(rrlrllr_rxa),
-        .tx_c0d(rrlrlll_txd), .tx_c0a(rrlrlll_txa),
-        .tx_c1d(rrlrllr_txd), .tx_c1a(rrlrllr_txa),
-        .tx_pd(rrlrll_txd), .tx_pa(rrlrll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrlrll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrlrll_rxr),
+        .rx_pd(rrlrll_rxd),
+        .rx_pa(rrlrll_rxa),
+        .tx_pd(rrlrll_txd),
+        .tx_pa(rrlrll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrlrlll (
+    ) leaf_rrlrlr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrlrlll_rxr),
-        .rx_pd(rrlrlll_rxd),
-        .rx_pa(rrlrlll_rxa),
-        .tx_pd(rrlrlll_txd),
-        .tx_pa(rrlrlll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrllr_rxr),
-        .rx_pd(rrlrllr_rxd),
-        .rx_pa(rrlrllr_rxa),
-        .tx_pd(rrlrllr_txd),
-        .tx_pa(rrlrllr_txa)
-    );
-    PE_up rrlrlr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h24),
-        .rx_pr(rrlrlr_rxr), .rx_pd(rrlrlr_rxd), .rx_pa(rrlrlr_rxa),
-        .rx_c0r(rrlrlrl_rxr), .rx_c0d(rrlrlrl_rxd), .rx_c0a(rrlrlrl_rxa),
-        .rx_c1r(rrlrlrr_rxr), .rx_c1d(rrlrlrr_rxd), .rx_c1a(rrlrlrr_rxa),
-        .tx_c0d(rrlrlrl_txd), .tx_c0a(rrlrlrl_txa),
-        .tx_c1d(rrlrlrr_txd), .tx_c1a(rrlrlrr_txa),
-        .tx_pd(rrlrlr_txd), .tx_pa(rrlrlr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrlrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrlrl_rxr),
-        .rx_pd(rrlrlrl_rxd),
-        .rx_pa(rrlrlrl_rxa),
-        .tx_pd(rrlrlrl_txd),
-        .tx_pa(rrlrlrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrlrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrlrr_rxr),
-        .rx_pd(rrlrlrr_rxd),
-        .rx_pa(rrlrlrr_rxa),
-        .tx_pd(rrlrlrr_txd),
-        .tx_pa(rrlrlrr_txa)
+        .rx_pr(rrlrlr_rxr),
+        .rx_pd(rrlrlr_rxd),
+        .rx_pa(rrlrlr_rxa),
+        .tx_pd(rrlrlr_txd),
+        .tx_pa(rrlrlr_txa)
     );
     PE_left rrlrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h30),
+        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h18),
         .rx_pr(rrlrr_rxr), .rx_pd(rrlrr_rxd), .rx_pa(rrlrr_rxa),
         .rx_c0r(rrlrrl_rxr), .rx_c0d(rrlrrl_rxd), .rx_c0a(rrlrrl_rxa),
         .rx_c1r(rrlrrr_rxr), .rx_c1d(rrlrrr_rxd), .rx_c1a(rrlrrr_rxa),
@@ -2034,69 +1380,27 @@ module Top (
         .tx_c1d(rrlrrr_txd), .tx_c1a(rrlrrr_txa),
         .tx_pd(rrlrr_txd), .tx_pa(rrlrr_txa)
     );
-    PE_down rrlrrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h3c),
-        .rx_pr(rrlrrl_rxr), .rx_pd(rrlrrl_rxd), .rx_pa(rrlrrl_rxa),
-        .rx_c0r(rrlrrll_rxr), .rx_c0d(rrlrrll_rxd), .rx_c0a(rrlrrll_rxa),
-        .rx_c1r(rrlrrlr_rxr), .rx_c1d(rrlrrlr_rxd), .rx_c1a(rrlrrlr_rxa),
-        .tx_c0d(rrlrrll_txd), .tx_c0a(rrlrrll_txa),
-        .tx_c1d(rrlrrlr_txd), .tx_c1a(rrlrrlr_txa),
-        .tx_pd(rrlrrl_txd), .tx_pa(rrlrrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrlrrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrlrrl_rxr),
+        .rx_pd(rrlrrl_rxd),
+        .rx_pa(rrlrrl_rxa),
+        .tx_pd(rrlrrl_txd),
+        .tx_pa(rrlrrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrlrrll (
+    ) leaf_rrlrrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrlrrll_rxr),
-        .rx_pd(rrlrrll_rxd),
-        .rx_pa(rrlrrll_rxa),
-        .tx_pd(rrlrrll_txd),
-        .tx_pa(rrlrrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrrlr_rxr),
-        .rx_pd(rrlrrlr_rxd),
-        .rx_pa(rrlrrlr_rxa),
-        .tx_pd(rrlrrlr_txd),
-        .tx_pa(rrlrrlr_txa)
-    );
-    PE_up rrlrrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br5_dat), .cfg_adr(br5_adr), .slv_addr(11'h48),
-        .rx_pr(rrlrrr_rxr), .rx_pd(rrlrrr_rxd), .rx_pa(rrlrrr_rxa),
-        .rx_c0r(rrlrrrl_rxr), .rx_c0d(rrlrrrl_rxd), .rx_c0a(rrlrrrl_rxa),
-        .rx_c1r(rrlrrrr_rxr), .rx_c1d(rrlrrrr_rxd), .rx_c1a(rrlrrrr_rxa),
-        .tx_c0d(rrlrrrl_txd), .tx_c0a(rrlrrrl_txa),
-        .tx_c1d(rrlrrrr_txd), .tx_c1a(rrlrrrr_txa),
-        .tx_pd(rrlrrr_txd), .tx_pa(rrlrrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrrrl_rxr),
-        .rx_pd(rrlrrrl_rxd),
-        .rx_pa(rrlrrrl_rxa),
-        .tx_pd(rrlrrrl_txd),
-        .tx_pa(rrlrrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrlrrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrlrrrr_rxr),
-        .rx_pd(rrlrrrr_rxd),
-        .rx_pa(rrlrrrr_rxa),
-        .tx_pd(rrlrrrr_txd),
-        .tx_pa(rrlrrrr_txa)
+        .rx_pr(rrlrrr_rxr),
+        .rx_pd(rrlrrr_rxd),
+        .rx_pa(rrlrrr_rxa),
+        .tx_pd(rrlrrr_txd),
+        .tx_pa(rrlrrr_txa)
     );
     PE_left rrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -2128,73 +1432,31 @@ module Top (
         .tx_c1d(rrrllr_txd), .tx_c1a(rrrllr_txa),
         .tx_pd(rrrll_txd), .tx_pa(rrrll_txa)
     );
-    PE_down rrrlll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h24),
-        .rx_pr(rrrlll_rxr), .rx_pd(rrrlll_rxd), .rx_pa(rrrlll_rxa),
-        .rx_c0r(rrrllll_rxr), .rx_c0d(rrrllll_rxd), .rx_c0a(rrrllll_rxa),
-        .rx_c1r(rrrlllr_rxr), .rx_c1d(rrrlllr_rxd), .rx_c1a(rrrlllr_rxa),
-        .tx_c0d(rrrllll_txd), .tx_c0a(rrrllll_txa),
-        .tx_c1d(rrrlllr_txd), .tx_c1a(rrrlllr_txa),
-        .tx_pd(rrrlll_txd), .tx_pa(rrrlll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrrlll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrrlll_rxr),
+        .rx_pd(rrrlll_rxd),
+        .rx_pa(rrrlll_rxa),
+        .tx_pd(rrrlll_txd),
+        .tx_pa(rrrlll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrrllll (
+    ) leaf_rrrllr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrrllll_rxr),
-        .rx_pd(rrrllll_rxd),
-        .rx_pa(rrrllll_rxa),
-        .tx_pd(rrrllll_txd),
-        .tx_pa(rrrllll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrlllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrlllr_rxr),
-        .rx_pd(rrrlllr_rxd),
-        .rx_pa(rrrlllr_rxa),
-        .tx_pd(rrrlllr_txd),
-        .tx_pa(rrrlllr_txa)
-    );
-    PE_up rrrllr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h30),
-        .rx_pr(rrrllr_rxr), .rx_pd(rrrllr_rxd), .rx_pa(rrrllr_rxa),
-        .rx_c0r(rrrllrl_rxr), .rx_c0d(rrrllrl_rxd), .rx_c0a(rrrllrl_rxa),
-        .rx_c1r(rrrllrr_rxr), .rx_c1d(rrrllrr_rxd), .rx_c1a(rrrllrr_rxa),
-        .tx_c0d(rrrllrl_txd), .tx_c0a(rrrllrl_txa),
-        .tx_c1d(rrrllrr_txd), .tx_c1a(rrrllrr_txa),
-        .tx_pd(rrrllr_txd), .tx_pa(rrrllr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrllrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrllrl_rxr),
-        .rx_pd(rrrllrl_rxd),
-        .rx_pa(rrrllrl_rxa),
-        .tx_pd(rrrllrl_txd),
-        .tx_pa(rrrllrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrllrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrllrr_rxr),
-        .rx_pd(rrrllrr_rxd),
-        .rx_pa(rrrllrr_rxa),
-        .tx_pd(rrrllrr_txd),
-        .tx_pa(rrrllrr_txa)
+        .rx_pr(rrrllr_rxr),
+        .rx_pd(rrrllr_rxd),
+        .rx_pa(rrrllr_rxa),
+        .tx_pd(rrrllr_txd),
+        .tx_pa(rrrllr_txa)
     );
     PE_left rrrlr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h3c),
+        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h24),
         .rx_pr(rrrlr_rxr), .rx_pd(rrrlr_rxd), .rx_pa(rrrlr_rxa),
         .rx_c0r(rrrlrl_rxr), .rx_c0d(rrrlrl_rxd), .rx_c0a(rrrlrl_rxa),
         .rx_c1r(rrrlrr_rxr), .rx_c1d(rrrlrr_rxd), .rx_c1a(rrrlrr_rxa),
@@ -2202,69 +1464,27 @@ module Top (
         .tx_c1d(rrrlrr_txd), .tx_c1a(rrrlrr_txa),
         .tx_pd(rrrlr_txd), .tx_pa(rrrlr_txa)
     );
-    PE_down rrrlrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h48),
-        .rx_pr(rrrlrl_rxr), .rx_pd(rrrlrl_rxd), .rx_pa(rrrlrl_rxa),
-        .rx_c0r(rrrlrll_rxr), .rx_c0d(rrrlrll_rxd), .rx_c0a(rrrlrll_rxa),
-        .rx_c1r(rrrlrlr_rxr), .rx_c1d(rrrlrlr_rxd), .rx_c1a(rrrlrlr_rxa),
-        .tx_c0d(rrrlrll_txd), .tx_c0a(rrrlrll_txa),
-        .tx_c1d(rrrlrlr_txd), .tx_c1a(rrrlrlr_txa),
-        .tx_pd(rrrlrl_txd), .tx_pa(rrrlrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrrlrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrrlrl_rxr),
+        .rx_pd(rrrlrl_rxd),
+        .rx_pa(rrrlrl_rxa),
+        .tx_pd(rrrlrl_txd),
+        .tx_pa(rrrlrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrrlrll (
+    ) leaf_rrrlrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrrlrll_rxr),
-        .rx_pd(rrrlrll_rxd),
-        .rx_pa(rrrlrll_rxa),
-        .tx_pd(rrrlrll_txd),
-        .tx_pa(rrrlrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrlrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrlrlr_rxr),
-        .rx_pd(rrrlrlr_rxd),
-        .rx_pa(rrrlrlr_rxa),
-        .tx_pd(rrrlrlr_txd),
-        .tx_pa(rrrlrlr_txa)
-    );
-    PE_up rrrlrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br6_dat), .cfg_adr(br6_adr), .slv_addr(11'h54),
-        .rx_pr(rrrlrr_rxr), .rx_pd(rrrlrr_rxd), .rx_pa(rrrlrr_rxa),
-        .rx_c0r(rrrlrrl_rxr), .rx_c0d(rrrlrrl_rxd), .rx_c0a(rrrlrrl_rxa),
-        .rx_c1r(rrrlrrr_rxr), .rx_c1d(rrrlrrr_rxd), .rx_c1a(rrrlrrr_rxa),
-        .tx_c0d(rrrlrrl_txd), .tx_c0a(rrrlrrl_txa),
-        .tx_c1d(rrrlrrr_txd), .tx_c1a(rrrlrrr_txa),
-        .tx_pd(rrrlrr_txd), .tx_pa(rrrlrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrlrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrlrrl_rxr),
-        .rx_pd(rrrlrrl_rxd),
-        .rx_pa(rrrlrrl_rxa),
-        .tx_pd(rrrlrrl_txd),
-        .tx_pa(rrrlrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrlrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrlrrr_rxr),
-        .rx_pd(rrrlrrr_rxd),
-        .rx_pa(rrrlrrr_rxa),
-        .tx_pd(rrrlrrr_txd),
-        .tx_pa(rrrlrrr_txa)
+        .rx_pr(rrrlrr_rxr),
+        .rx_pd(rrrlrr_rxd),
+        .rx_pa(rrrlrr_rxa),
+        .tx_pd(rrrlrr_txd),
+        .tx_pa(rrrlrr_txa)
     );
     PE_up rrrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
@@ -2286,73 +1506,31 @@ module Top (
         .tx_c1d(rrrrlr_txd), .tx_c1a(rrrrlr_txa),
         .tx_pd(rrrrl_txd), .tx_pa(rrrrl_txa)
     );
-    PE_down rrrrll (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h18),
-        .rx_pr(rrrrll_rxr), .rx_pd(rrrrll_rxd), .rx_pa(rrrrll_rxa),
-        .rx_c0r(rrrrlll_rxr), .rx_c0d(rrrrlll_rxd), .rx_c0a(rrrrlll_rxa),
-        .rx_c1r(rrrrllr_rxr), .rx_c1d(rrrrllr_rxd), .rx_c1a(rrrrllr_rxa),
-        .tx_c0d(rrrrlll_txd), .tx_c0a(rrrrlll_txa),
-        .tx_c1d(rrrrllr_txd), .tx_c1a(rrrrllr_txa),
-        .tx_pd(rrrrll_txd), .tx_pa(rrrrll_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrrrll (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrrrll_rxr),
+        .rx_pd(rrrrll_rxd),
+        .rx_pa(rrrrll_rxa),
+        .tx_pd(rrrrll_txd),
+        .tx_pa(rrrrll_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrrrlll (
+    ) leaf_rrrrlr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrrrlll_rxr),
-        .rx_pd(rrrrlll_rxd),
-        .rx_pa(rrrrlll_rxa),
-        .tx_pd(rrrrlll_txd),
-        .tx_pa(rrrrlll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrllr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrllr_rxr),
-        .rx_pd(rrrrllr_rxd),
-        .rx_pa(rrrrllr_rxa),
-        .tx_pd(rrrrllr_txd),
-        .tx_pa(rrrrllr_txa)
-    );
-    PE_up rrrrlr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h24),
-        .rx_pr(rrrrlr_rxr), .rx_pd(rrrrlr_rxd), .rx_pa(rrrrlr_rxa),
-        .rx_c0r(rrrrlrl_rxr), .rx_c0d(rrrrlrl_rxd), .rx_c0a(rrrrlrl_rxa),
-        .rx_c1r(rrrrlrr_rxr), .rx_c1d(rrrrlrr_rxd), .rx_c1a(rrrrlrr_rxa),
-        .tx_c0d(rrrrlrl_txd), .tx_c0a(rrrrlrl_txa),
-        .tx_c1d(rrrrlrr_txd), .tx_c1a(rrrrlrr_txa),
-        .tx_pd(rrrrlr_txd), .tx_pa(rrrrlr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrlrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrlrl_rxr),
-        .rx_pd(rrrrlrl_rxd),
-        .rx_pa(rrrrlrl_rxa),
-        .tx_pd(rrrrlrl_txd),
-        .tx_pa(rrrrlrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrlrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrlrr_rxr),
-        .rx_pd(rrrrlrr_rxd),
-        .rx_pa(rrrrlrr_rxa),
-        .tx_pd(rrrrlrr_txd),
-        .tx_pa(rrrrlrr_txa)
+        .rx_pr(rrrrlr_rxr),
+        .rx_pd(rrrrlr_rxd),
+        .rx_pa(rrrrlr_rxa),
+        .tx_pd(rrrrlr_txd),
+        .tx_pa(rrrrlr_txa)
     );
     PE_left rrrrr (
         .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h30),
+        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h18),
         .rx_pr(rrrrr_rxr), .rx_pd(rrrrr_rxd), .rx_pa(rrrrr_rxa),
         .rx_c0r(rrrrrl_rxr), .rx_c0d(rrrrrl_rxd), .rx_c0a(rrrrrl_rxa),
         .rx_c1r(rrrrrr_rxr), .rx_c1d(rrrrrr_rxd), .rx_c1a(rrrrrr_rxa),
@@ -2360,69 +1538,27 @@ module Top (
         .tx_c1d(rrrrrr_txd), .tx_c1a(rrrrrr_txa),
         .tx_pd(rrrrr_txd), .tx_pa(rrrrr_txa)
     );
-    PE_down rrrrrl (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h3c),
-        .rx_pr(rrrrrl_rxr), .rx_pd(rrrrrl_rxd), .rx_pa(rrrrrl_rxa),
-        .rx_c0r(rrrrrll_rxr), .rx_c0d(rrrrrll_rxd), .rx_c0a(rrrrrll_rxa),
-        .rx_c1r(rrrrrlr_rxr), .rx_c1d(rrrrrlr_rxd), .rx_c1a(rrrrrlr_rxa),
-        .tx_c0d(rrrrrll_txd), .tx_c0a(rrrrrll_txa),
-        .tx_c1d(rrrrrlr_txd), .tx_c1a(rrrrrlr_txa),
-        .tx_pd(rrrrrl_txd), .tx_pa(rrrrrl_txa)
+    leaf #(
+        .NOC_WID(16)
+    ) leaf_rrrrrl (
+        .clk  (wb_clk_i),
+        .rst  (wb_rst_i),
+        .rx_pr(rrrrrl_rxr),
+        .rx_pd(rrrrrl_rxd),
+        .rx_pa(rrrrrl_rxa),
+        .tx_pd(rrrrrl_txd),
+        .tx_pa(rrrrrl_txa)
     );
     leaf #(
         .NOC_WID(16)
-    ) leaf_rrrrrll (
+    ) leaf_rrrrrr (
         .clk  (wb_clk_i),
         .rst  (wb_rst_i),
-        .rx_pr(rrrrrll_rxr),
-        .rx_pd(rrrrrll_rxd),
-        .rx_pa(rrrrrll_rxa),
-        .tx_pd(rrrrrll_txd),
-        .tx_pa(rrrrrll_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrrlr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrrlr_rxr),
-        .rx_pd(rrrrrlr_rxd),
-        .rx_pa(rrrrrlr_rxa),
-        .tx_pd(rrrrrlr_txd),
-        .tx_pa(rrrrrlr_txa)
-    );
-    PE_up rrrrrr (
-        .clk(wb_clk_i), .rst(wb_rst_i),
-        .cfg_dat(br7_dat), .cfg_adr(br7_adr), .slv_addr(11'h48),
-        .rx_pr(rrrrrr_rxr), .rx_pd(rrrrrr_rxd), .rx_pa(rrrrrr_rxa),
-        .rx_c0r(rrrrrrl_rxr), .rx_c0d(rrrrrrl_rxd), .rx_c0a(rrrrrrl_rxa),
-        .rx_c1r(rrrrrrr_rxr), .rx_c1d(rrrrrrr_rxd), .rx_c1a(rrrrrrr_rxa),
-        .tx_c0d(rrrrrrl_txd), .tx_c0a(rrrrrrl_txa),
-        .tx_c1d(rrrrrrr_txd), .tx_c1a(rrrrrrr_txa),
-        .tx_pd(rrrrrr_txd), .tx_pa(rrrrrr_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrrrl (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrrrl_rxr),
-        .rx_pd(rrrrrrl_rxd),
-        .rx_pa(rrrrrrl_rxa),
-        .tx_pd(rrrrrrl_txd),
-        .tx_pa(rrrrrrl_txa)
-    );
-    leaf #(
-        .NOC_WID(16)
-    ) leaf_rrrrrrr (
-        .clk  (wb_clk_i),
-        .rst  (wb_rst_i),
-        .rx_pr(rrrrrrr_rxr),
-        .rx_pd(rrrrrrr_rxd),
-        .rx_pa(rrrrrrr_rxa),
-        .tx_pd(rrrrrrr_txd),
-        .tx_pa(rrrrrrr_txa)
+        .rx_pr(rrrrrr_rxr),
+        .rx_pd(rrrrrr_rxd),
+        .rx_pa(rrrrrr_rxa),
+        .tx_pd(rrrrrr_txd),
+        .tx_pa(rrrrrr_txa)
     );
 endmodule
 `default_nettype none

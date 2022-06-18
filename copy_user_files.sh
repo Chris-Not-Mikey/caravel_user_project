@@ -3,7 +3,7 @@
 # Setting paths
 top="user_proj_example"
 base_dir="/home/users/liuleo/EE372/top"
-build_target="build64_final"
+build_target="big2"
 
 gds_path="$base_dir/$build_target/*-signoff/outputs/design-merged.gds"
 lef_path="$base_dir/$build_target/*-signoff/outputs/design.lef"
