@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1655510152
+timestamp 1668392832
 << obsli1 >>
 rect 2000 2000 287982 349004
 << obsm1 >>
@@ -4171,8 +4171,8 @@ port 645 nsew signal input
 string FIXED_BBOX 0 0 292000 352000
 string LEFclass BLOCK
 string LEFview TRUE
-string GDS_END 112832398
-string GDS_FILE /scratch/users/liuleo/mine/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.magic.gds
-string GDS_START 111833878
+string GDS_END 113965472
+string GDS_FILE /scratch/users/cmc2374/grapevine_caravel/caravel_user_project/openlane/user_project_wrapper/runs/user_project_wrapper/results/finishing/user_project_wrapper.magic.gds
+string GDS_START 112966952
 << end >>
 
